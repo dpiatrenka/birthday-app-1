@@ -26,15 +26,15 @@ function downloadImage() {
 }
 
 function Balloons({ burst }: { burst: boolean }) {
-  const balloons = Array.from({ length: 20 }, (_, i) => ({
+  const balloons = Array.from({ length: 8 }, (_, i) => ({
     id: i,
-    left: `${4 + ((i * 7.1) % 90)}%`,
-    delay: `${(i % 7) * 0.35}s`,
-    duration: `${7 + (i % 5) * 1.1}s`,
+    left: `${6 + ((i * 11.5) % 82)}%`,
+    delay: `${(i % 5) * 0.55}s`,
+    duration: `${8 + (i % 4) * 1.2}s`,
     color: BALLOON_COLORS[i % BALLOON_COLORS.length],
-    size: `${42 + (i % 4) * 10}px`,
-    sway: `${(i % 2 === 0 ? 1 : -1) * (10 + (i % 4) * 4)}px`,
-    rotate: `${(i % 2 === 0 ? -1 : 1) * (4 + (i % 3) * 3)}deg`,
+    size: `${78 + (i % 3) * 18}px`,
+    sway: `${(i % 2 === 0 ? 1 : -1) * (14 + (i % 3) * 6)}px`,
+    rotate: `${(i % 2 === 0 ? -1 : 1) * (3 + (i % 3) * 2)}deg`,
   }))
 
   return (
